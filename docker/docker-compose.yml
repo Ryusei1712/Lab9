@@ -1,0 +1,10 @@
+version: '3'
+services:
+  lab9:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: lab9
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: abc123
+    ports:
+      - "5432:5432"
