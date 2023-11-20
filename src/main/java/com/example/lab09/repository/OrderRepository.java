@@ -1,6 +1,6 @@
-package com.example.lab9.repository;
+package com.example.lab09.repository;
 
-import com.example.lab9.model.Order;
+import com.example.lab09.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {

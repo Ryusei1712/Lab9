@@ -1,7 +1,7 @@
-package com.example.lab9.controller;
+package com.example.lab09.controller;
 
-import com.example.lab9.model.Order;
-import com.example.lab9.service.OrderService;
+import com.example.lab09.model.Order;
+import com.example.lab09.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

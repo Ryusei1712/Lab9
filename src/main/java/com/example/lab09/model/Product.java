@@ -1,12 +1,10 @@
-package com.example.lab9.model;
+package com.example.lab09.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import javax.naming.Name;
 
 
 @Entity

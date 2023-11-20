@@ -1,7 +1,7 @@
-package com.example.lab9.repository;
+package com.example.lab09.repository;
 
 
-import com.example.lab9.model.User;
+import com.example.lab09.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
