@@ -14,7 +14,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance(); // Không sử dụng password encoding, chỉ sử dụng cho mục đích demo
+        return NoOpPasswordEncoder.getInstance();
     }
 
     @Override
@@ -32,6 +32,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .permitAll()
                 .and()
-                .csrf().disable(); // Tắt CSRF để đơn giản hóa cho mục đích demo
+                .csrf().disable();
     }
 }

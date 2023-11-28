@@ -22,7 +22,7 @@ public class Order {
     private String orderNumber;
     private float totalSellingPrice;
 
-    @ManyToOne // Một đơn hàng thuộc về một người dùng
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 

@@ -1,6 +1,5 @@
 package com.example.lab09.controller;
 
-import com.example.lab09.dto.UserDTO;
 import com.example.lab09.model.User;
 import com.example.lab09.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,7 @@ public class AccountController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody UserDTO user) {
+    public ResponseEntity<String> login(@RequestBody User user) {
         // Validate user credentials (you can use Spring Security for more advanced features)
         if (userService.validateUser(user.getEmail(), user.getPassword())) {
             return new ResponseEntity<>("Login successful", HttpStatus.OK);
