@@ -40,11 +40,8 @@ public class ProductService {
             existingProduct.setPrice(updatedProduct.getPrice());
             existingProduct.setIllustration(updatedProduct.getIllustration());
             existingProduct.setDescription(updatedProduct.getDescription());
-
-            // Lưu lại sản phẩm đã cập nhật vào cơ sở dữ liệu
             productRepository.save(existingProduct);
         }
-        // Nếu sản phẩm không tồn tại, bạn có thể xử lý theo ý muốn (ví dụ, throw exception hoặc trả về giá trị khác)
     }
 
 }
