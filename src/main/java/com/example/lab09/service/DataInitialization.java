@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.util.List;
+import java.util.Arrays;
 
 @Component
 public class DataInitialization {
@@ -40,34 +40,10 @@ public class DataInitialization {
         userService.registerUser(new User(5L, "user5@gmail.com", "password5", "User", "Five"));
 
         // Thêm mẫu dữ liệu cho Order
-        orderService.addOrder(new Order(1L, "ORD001", 6000, userService.getUserById(1L), List.of(productService.getProductById(1L), productService.getProductById(2L))));
-        orderService.addOrder(new Order(2L, "ORD002", 4000, userService.getUserById(2L), List.of(productService.getProductById(3L), productService.getProductById(4L))));
-        orderService.addOrder(new Order(3L, "ORD003", 9000, userService.getUserById(3L), List.of(productService.getProductById(5L))));
-        orderService.addOrder(new Order(4L, "ORD004", 6000, userService.getUserById(4L), List.of(productService.getProductById(1L), productService.getProductById(2L))));
-        orderService.addOrder(new Order(5L, "ORD005", 3000, userService.getUserById(5L), List.of(productService.getProductById(3L))));
-
-
-        // In ra thông tin sau khi thêm dữ liệu
-//        printData();
-    }
-
-    private void printData() {
-        List<Product> allProducts = productService.getAllProducts();
-        System.out.println("All Products:");
-        for (Product product : allProducts) {
-            System.out.println(product);
-        }
-
-        List<User> allUsers = userService.getAllUsers();
-        System.out.println("All Users:");
-        for (User user : allUsers) {
-            System.out.println(user);
-        }
-
-        List<Order> allOrders = orderService.getAllOrders();
-        System.out.println("All Orders:");
-        for (Order order : allOrders) {
-            System.out.println(order);
-        }
+        orderService.addOrder(new Order(1L, "ORD001", 6000, userService.getUserById(1L), Arrays.asList(productService.getProductById(1L), productService.getProductById(2L))));
+        orderService.addOrder(new Order(2L, "ORD002", 4000, userService.getUserById(2L), Arrays.asList(productService.getProductById(3L), productService.getProductById(4L))));
+        orderService.addOrder(new Order(3L, "ORD003", 9000, userService.getUserById(3L), Arrays.asList(productService.getProductById(5L))));
+        orderService.addOrder(new Order(4L, "ORD004", 6000, userService.getUserById(4L), Arrays.asList(productService.getProductById(1L), productService.getProductById(2L))));
+        orderService.addOrder(new Order(5L, "ORD005", 3000, userService.getUserById(5L), Arrays.asList(productService.getProductById(3L))));
     }
 }
