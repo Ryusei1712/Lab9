@@ -55,12 +55,7 @@ public class JwtFilter extends OncePerRequestFilter {
     }
 
     private UsernamePasswordAuthenticationToken getAuthentication(String jwt) {
-        // Giải mã thông tin người dùng từ token và trả về một đối tượng Authentication
-        // Ở đây, bạn có thể thêm logic để lấy thông tin người dùng từ token, ví dụ, từ cơ sở dữ liệu
-        // Đối với mục đích minh họa, đây chỉ là một ví dụ đơn giản
 
-        // Lưu ý rằng trong thực tế, bạn nên kiểm tra tính hợp lệ của thông tin người dùng từ token,
-        // ví dụ, kiểm tra xem tài khoản có tồn tại không, xem token có quyền truy cập đúng không, v.v.
 
         String username = Jwts.parser().setSigningKey(secret).parseClaimsJws(jwt).getBody().getSubject();
 
